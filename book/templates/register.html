@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style type='text/css'>
+  body{
+    background-image: url('https://i.pinimg.com/originals/06/6f/4c/066f4ceefb15c49ab59f51c6b64fa66a.jpg');
+    background-size:contain;
+    background-position: center;
+  }
+  form{
+    margin: 200px;
+  #  background-image: url('https://ak.picdn.net/shutterstock/videos/9441686/thumb/1.jpg');
+  }
+  table{
+   border:solid silver  10px;
+
+    color:dark;
+    text:strong;
+  }
+  input{
+    background-color:black;
+    color: white;
+  }
+  td{
+    background-color:silver;
+    color: black;
+  }
+  h2{
+    color: black;
+  }
+  p{
+    color: black;
+  }
+
+  </style>
+  <title>library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<center>
+
+    <form action=''method='post'>
+      <center>
+      <h2><strong><em>REGISTER HERE</em></strong></h2>
+    {%csrf_token%}
+    {%for p in form%}
+    <table>
+      <tr>
+        <td><strong>{{p.label}}:</strong></td>
+        <br>
+        <td>{{p}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+
+    <input type='submit' value='submit'/>
+</div>
+</div>
+</form>
+<p>if you have an account already click here to <a href="{% url 'login' %}">login</a></p>
+
+</body>
+</html>
